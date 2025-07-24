@@ -57,8 +57,6 @@ def right_paddle_up():
 def right_paddle_down():
     right_paddle.sety(right_paddle.ycor() - 20)
 
-
-
 win.listen()
 win.onkeypress(left_paddle_up,'w')
 win.onkeypress(left_paddle_down,'s')
@@ -94,6 +92,7 @@ while True:
         score_b += 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Ariel", 24, "normal"))
+        
     #collision with paddles
     if ball.xcor() > 380 and right_paddle.ycor()-50 < ball.ycor() < right_paddle.ycor()+50:
         ball.setx(360)
